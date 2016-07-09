@@ -33,7 +33,7 @@ void MW_wait(uint32_t wait);
 int main(void){
   /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
   HAL_Init();
-
+ 
   /* Configure the system clock */
   SystemClock_Config();
   
@@ -69,11 +69,11 @@ int main(void){
   MW_GPIOWrite(GPIOAID,GPIO_PIN_5,0);
 
   while (1) {
-    message("msg","HelloWorld");
+    message("msg","HelloWorld%sHello","Seimi");
     MW_GPIOWrite(GPIOAID,GPIO_PIN_5,1);
-    MW_wait(1000);
+    MW_wait(100);
     MW_GPIOWrite(GPIOAID,GPIO_PIN_5,0);
-    MW_wait(1000);
+    MW_wait(100);
     flush();
   }
 }
