@@ -65,6 +65,16 @@ int main(void){
   MW_GPIOWrite(GPIOAID,GPIO_PIN_5,0); 
  
   while (1) {
+    if(MW_GPIORead(GPIOCID,GPIO_PIN13)){
+      MW_GPIOWrite(GPIOAID,GPIO_PIN5,0);
+      flush();
+    }else{
+      MW_GPIOWrite(GPIOAID,GPIO_PIN5,1);
+    }
+
+    MW_wait(300);
+    MX_print("push now\n");
+    message(msg,"%d",MX_print(%d,MW_GPIORead(GPIOCID,GPIO_PIN13));
   } 
 } 
  

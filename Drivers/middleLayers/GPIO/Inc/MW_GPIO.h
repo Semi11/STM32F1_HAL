@@ -44,7 +44,7 @@ void MW_SetGPIOSpeed(uint32_t Speed);
 void MW_GPIOInit(gpioid_t id);
 
 void MW_GPIOWrite(gpioid_t id,uint16_t Pin,uint32_t PinState);
-uint32_t MW_GPIORead(gpioid_t id,uint16_t Pin);
+xuint32_t MW_GPIORead(gpioid_t id,uint16_t Pin);
 void MW_GPIOToggle(gpioid_t id,uint16_t Pin);
 
 #endif /* MIDLEWARE_SRC_MW_GPIO_H_ */
